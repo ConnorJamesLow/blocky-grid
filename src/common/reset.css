@@ -1,0 +1,18 @@
+/* CSS Reset */
+@namespace svg url(http://www.w3.org/2000/svg);
+*:where(:not(svg|*)) {
+    all: unset;
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+    position: inherit;
+}
+
+:where(script, style, head, link, meta, title, base, noscript) {
+    display: none;
+
+    :not(&) {
+        box-sizing: border-box;
+        display: block;
+    }
+}
